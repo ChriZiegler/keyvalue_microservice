@@ -1,0 +1,12 @@
+Run this server on port 8000 by running `python keyvalue.py` in your console
+
+Welcome to the key-value microservice. Here you can perform the following operations:
+1. Query the database of key-value pairs with a key, to see the value it is associated with
+2. Assign a key-value pair to the database.
+
+A key can only ever be associated with one value. If a key that already exists in
+the database is assigned a value, it will be overwritten by the new value.
+
+If a key does not exist in the database, you will get a message saying such.
+
+A key cannot be empty (for either getting or setting), but a value can be. 

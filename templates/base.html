@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="static/index.css">
+        <title>Key-Value Microservice</title>
+    </head>
+    <body>
+        <h1>Welcome to the key-value microservice.</h1>
+        <p>Below you can use 'get' to get the value of a key <br>
+           Or you can use 'set' to set the value of a key<br>
+           But your key cannot be an empty string!</p>
+        <br>
+        <fieldset class="divbox">
+          <legend>Get</legend>
+          <form method="POST" action="/">
+            <label for="get_key">Get key:</label><input type="text" name="get_key" id="get_key">
+            <input type="submit" value="Get">
+          </form>
+        </fieldset>
+        <br>
+        <fieldset class="divbox">
+          <legend>Set</legend>
+          <form method="POST" action="/">
+            <label for="set_key">Set key:</label><input type="text" name="set_key" id="set_key">
+            <label for="set_value">Set value:</label><input type="text" name="set_value", id="set_value">
+            <input type="submit" value="Set">
+          </form>
+        </fieldset>
+        <br>
+        <fieldset class="divbox" id='results'>
+          <legend>Results</legend>
+          <p>
+          {% block operation_result %}
+          {% endblock %}
+          </p>
+        </fieldset>
+    </body>
+</html>
